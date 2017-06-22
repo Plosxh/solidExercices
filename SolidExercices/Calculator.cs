@@ -6,7 +6,14 @@ namespace SolidExercices
 {
     public class Calculator
     {
-        public readonly string[] symboles = { "+", "-", "/", "*" };
+        private readonly string[] symboles = { "+", "-", "/", "*" };
+        private IOperationInterface _operation;
+
+        public Calculator(IOperationInterface operation_interface)
+        {
+            _operation = operation_interface;
+        }
+       
         public double Calculate(string operation)
         {
             double res = 0.0;
@@ -18,25 +25,7 @@ namespace SolidExercices
                 {
                     try
                     {
-                        double operande1 = Convert.ToDouble(operandes[0]);
-                        double operande2 = Convert.ToDouble(operandes[1]);
-
-                        if (i == 0)
-                        {
-                            res = operande1 + operande2;
-                        }
-                        else if (i == 1)
-                        {
-                            res = operande1 - operande2;
-                        }
-                        else if (i == 2)
-                        {
-                            res = operande1 / operande2;
-                        }
-                        else if (i == 3)
-                        {
-                            res = operande1 * operande2;
-                        } 
+                        res = _operation.Calculate(operation);
                     }
                     catch (FormatException e)
                     {
