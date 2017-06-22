@@ -9,5 +9,6 @@ namespace SolidExercices
     public interface IOperationInterface
     {
         decimal Calculate(String operation);
+        string GetSymbole();
     }
 }

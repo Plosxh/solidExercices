@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using NFluent;
 using NUnit.Framework;
 
@@ -6,43 +7,84 @@ namespace SolidExercices.Tests
 {
     public class CalculatorShould
     {
+
         [Test]
         public void CalculateASum()
         {
-            var operation = new OperationInterfaceSum();
-            var calculator = new Calculator(operation);
+            List<IOperationInterface> interfaces = new List<IOperationInterface>();
+            OperationInterfaceMult mult = new OperationInterfaceMult();
+            OperationInterfaceDiv div = new OperationInterfaceDiv();
+            OperationInterfaceSum sum = new OperationInterfaceSum();
+            OperationInterfaceSub sub = new OperationInterfaceSub();
+            interfaces.Add(mult);
+            interfaces.Add(div);
+            interfaces.Add(sum);
+            interfaces.Add(sub);
+            var calculator = new Calculator(interfaces);
             var result = calculator.Calculate("1+2,3");
             Check.That(result).IsEqualTo(Convert.ToDecimal(3.3));
         }
         [Test]
         public void CalculateASub()
         {
-            var operation = new OperationInterfaceSub();
-            var calculator = new Calculator(operation);
+            List<IOperationInterface> interfaces = new List<IOperationInterface>();
+            OperationInterfaceMult mult = new OperationInterfaceMult();
+            OperationInterfaceDiv div = new OperationInterfaceDiv();
+            OperationInterfaceSum sum = new OperationInterfaceSum();
+            OperationInterfaceSub sub = new OperationInterfaceSub();
+            interfaces.Add(mult);
+            interfaces.Add(div);
+            interfaces.Add(sum);
+            interfaces.Add(sub);
+            var calculator = new Calculator(interfaces);
             var result = calculator.Calculate("2-1");
             Check.That(result).IsEqualTo(Convert.ToDecimal(1.0));
         }
         [Test]
         public void CalculateADiv()
         {
-            var operation = new OperationInterfaceDiv();
-            var calculator = new Calculator(operation);
+            List<IOperationInterface> interfaces = new List<IOperationInterface>();
+            OperationInterfaceMult mult = new OperationInterfaceMult();
+            OperationInterfaceDiv div = new OperationInterfaceDiv();
+            OperationInterfaceSum sum = new OperationInterfaceSum();
+            OperationInterfaceSub sub = new OperationInterfaceSub();
+            interfaces.Add(mult);
+            interfaces.Add(div);
+            interfaces.Add(sum);
+            interfaces.Add(sub);
+            var calculator = new Calculator(interfaces);
             var result = calculator.Calculate("1/2");
             Check.That(result).IsEqualTo(Convert.ToDecimal(0.5));
         }
         [Test]
         public void CalculateAMult()
         {
-            var operation = new OperationInterfaceMult();
-            var calculator = new Calculator(operation);
+            List<IOperationInterface> interfaces = new List<IOperationInterface>();
+            OperationInterfaceMult mult = new OperationInterfaceMult();
+            OperationInterfaceDiv div = new OperationInterfaceDiv();
+            OperationInterfaceSum sum = new OperationInterfaceSum();
+            OperationInterfaceSub sub = new OperationInterfaceSub();
+            interfaces.Add(mult);
+            interfaces.Add(div);
+            interfaces.Add(sum);
+            interfaces.Add(sub);
+            var calculator = new Calculator(interfaces);
             var result = calculator.Calculate("1*2");
             Check.That(result).IsEqualTo(Convert.ToDecimal(2.0));
         }
         [Test]
         public void CalculateException()
         {
-            var operation = new OperationInterfaceSum();
-            var calculator = new Calculator(operation);
+            List<IOperationInterface> interfaces = new List<IOperationInterface>();
+            OperationInterfaceMult mult = new OperationInterfaceMult();
+            OperationInterfaceDiv div = new OperationInterfaceDiv();
+            OperationInterfaceSum sum = new OperationInterfaceSum();
+            OperationInterfaceSub sub = new OperationInterfaceSub();
+            interfaces.Add(mult);
+            interfaces.Add(div);
+            interfaces.Add(sum);
+            interfaces.Add(sub);
+            var calculator = new Calculator(interfaces);
             var result = calculator.Calculate("1*2-9");
             Check.That(result).IsEqualTo(Convert.ToDecimal(0.0));
         }
