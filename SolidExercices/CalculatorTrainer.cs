@@ -5,20 +5,16 @@ namespace SolidExercices
 {
     public class CalculatorTrainer
     {
-        private readonly string[] _operations = new[]
-            {"1+2,3", "2 x 3,6", "6-1-3,8", "6,6/3", "6/0", "not an operation", "a+1", "12", ""};
+        
+        private string[] _operations;
 
-        public void Run()
+        public CalculatorTrainer(Operations operationsListe)
         {
-            List < IOperationInterface > interfaces= new List<IOperationInterface>();
-            OperationInterfaceMult mult = new OperationInterfaceMult();
-            OperationInterfaceDiv div = new OperationInterfaceDiv();
-            OperationInterfaceSum sum = new OperationInterfaceSum();
-            OperationInterfaceSub sub = new OperationInterfaceSub();
-            interfaces.Add(mult);
-            interfaces.Add(div);
-            interfaces.Add(sum);
-            interfaces.Add(sub);
+            _operations = operationsListe.GetListe();
+        }
+
+        public void Run(List<IOperationInterface> interfaces)
+        {
             var calculator = new Calculator(interfaces);
             foreach (var operation in _operations)
             {
@@ -27,9 +23,13 @@ namespace SolidExercices
                     var result = calculator.Calculate(operation);
                     Console.WriteLine(operation + " = " + result);
                 }
-                catch (ArgumentException e)
+                catch (DivideByZeroException divide)
                 {
-                    Console.WriteLine("ERROR: " + e.Message);
+                    Console.WriteLine("Caught by CalculatorTrainer: " + divide.Message);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("ERROR: " + e.Message); 
                 }
             }
         }

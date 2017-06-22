@@ -21,11 +21,11 @@ Q1) *Pour éviter les if ou switch, on peut utiliser une boucle, ici je créer unt
 
 Q2) *pour faire en sorte que Calculator ne sache pas qu'elles opération il peut faire, nous faisons une interface, cela permettra de pouvoir implémenter n'importe quel calcul*
 
-Q3)
+Q3) *le principe que l'ont utilise ici, est celui de séparer les fonctionalités afin que chaque classe ai sa fonction et pas plus*
 
-Q4)
+Q4) * le probleme est que les différents tests font arrêter l'application, par exemple la division par zero*
 
-Q5)
+Q5) * refactoring, ou déplacer des bout de code et les rassembler dans une même classe pour séparer les fonctionnalités*
 
 Q6)
  

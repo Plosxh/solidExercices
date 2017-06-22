@@ -45,11 +45,13 @@
   <ItemGroup>
     <Compile Include="Calculator.cs" />
     <Compile Include="CalculatorTrainer.cs" />
+    <Compile Include="Operation.cs" />
     <Compile Include="OperationInterface.cs" />
     <Compile Include="OperationInterfaceDiv.cs" />
     <Compile Include="OperationInterfaceMult.cs" />
     <Compile Include="OperationInterfaceSub.cs" />
     <Compile Include="OperationInterfaceSum.cs" />
+    <Compile Include="Operations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,8 +11,16 @@ namespace SolidExercices
         private string _symbole = "/";
         public decimal Calculate(string operation)
         {
-            string[] operande = operation.Split(Convert.ToChar("/"));
-            return Convert.ToDecimal(operande[0]) / Convert.ToDecimal(operande[1]);
+            try
+            {
+                string[] operande = operation.Split(Convert.ToChar("/"));
+                return Convert.ToDecimal(operande[0]) / Convert.ToDecimal(operande[1]);
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         public string GetSymbole()
