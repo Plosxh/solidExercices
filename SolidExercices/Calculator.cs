@@ -16,22 +16,33 @@ namespace SolidExercices
                 var operandes = operation.Split(Convert.ToChar(symboles[i]));
                 if (operandes.Length>1)
                 {
-                    if (symboles[i]=="+")
+                    try
                     {
-                        res = Convert.ToDouble(operandes[0]) + Convert.ToDouble(operandes[1]);
+                        double operande1 = Convert.ToDouble(operandes[0]);
+                        double operande2 = Convert.ToDouble(operandes[1]);
+
+                        if (i == 0)
+                        {
+                            res = operande1 + operande2;
+                        }
+                        else if (i == 1)
+                        {
+                            res = operande1 - operande2;
+                        }
+                        else if (i == 2)
+                        {
+                            res = operande1 / operande2;
+                        }
+                        else if (i == 3)
+                        {
+                            res = operande1 * operande2;
+                        } 
                     }
-                    else if (symboles[i] == "-")
+                    catch (FormatException e)
                     {
-                        res = Convert.ToDouble(operandes[0]) - Convert.ToDouble(operandes[1]);
+                        Console.WriteLine("Mauvaise opération");
                     }
-                    else if (symboles[i] == "/")
-                    {
-                        res = Convert.ToDouble(operandes[0]) / Convert.ToDouble(operandes[1]);
-                    }
-                    else if (symboles[i] == "*")
-                    {
-                        res = Convert.ToDouble(operandes[0]) * Convert.ToDouble(operandes[1]);
-                    } 
+
                 }
             }
             return res;

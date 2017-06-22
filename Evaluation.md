@@ -17,7 +17,7 @@ A LA FIN DU TP: pensez à pousser vos commits sur votre compte GitHub et envoyer 
 Réponses aux questions posées
 -----------------------------
 
-Q1)
+Q1) *Pour éviter les if ou switch, on peut utiliser une boucle, ici je créer untableau contenant les symboles afin de boucler dessus*
 
 Q2)
 

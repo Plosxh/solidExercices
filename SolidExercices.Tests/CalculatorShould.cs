@@ -33,5 +33,12 @@ namespace SolidExercices.Tests
             var result = calculator.Calculate("1*2");
             Check.That(result).IsEqualTo(2.0);
         }
+        [Test]
+        public void CalculateException()
+        {
+            var calculator = new Calculator();
+            var result = calculator.Calculate("1*2-9");
+            Check.That(result).IsEqualTo(0.0);
+        }
     }
 }
