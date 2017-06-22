@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SolidExercices
 {
-    class Operation
+    interface IConnecteurInterface
     {
+        String[] GetOperations();
     }
 }

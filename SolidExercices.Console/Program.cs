@@ -6,7 +6,7 @@ namespace SolidExercices.Console
     {
         public static void Main()
         {
-            Operations operationsListe = new Operations();
+            ConnecteurFichier operationsListe = new ConnecteurFichier();
             List < IOperationInterface > interfaces= new List<IOperationInterface>();
             OperationInterfaceMult mult = new OperationInterfaceMult();
             OperationInterfaceDiv div = new OperationInterfaceDiv();

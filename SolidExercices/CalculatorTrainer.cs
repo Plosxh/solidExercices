@@ -8,9 +8,9 @@ namespace SolidExercices
         
         private string[] _operations;
 
-        public CalculatorTrainer(Operations operationsListe)
+        public CalculatorTrainer(ConnecteurFichier operationsListe)
         {
-            _operations = operationsListe.GetListe();
+            _operations = operationsListe.GetOperations();
         }
 
         public void Run(List<IOperationInterface> interfaces)
