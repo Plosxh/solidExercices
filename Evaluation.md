@@ -1,31 +1,32 @@
-Evaluation finale du cours .NET à l'IUT Lyon 1
+Evaluation finale du cours .NET Ã  l'IUT Lyon 1
 ==============================================
+Etudiant : Pierre Charrat Groupe 1
 
-Critères d'évaluation
+CritÃ¨res d'Ã©valuation
 ---------------------
 
-* Solution apportée aux problèmes posés dans le fichier Readme.md + réponses aux questions (à mettre dans le fichier ci-dessous)
-* La qualité des commits : granularité fine et commentaires explicites du pourquoi (et non du quoi, i.e ne pas dire quels fichiers ont été modifiés, c'est inutile, Git le dit déjà)
-* La qualité du code : utiliser un nommage correct + R# donne des règles à respecter, il suffit de les corriger
-* Les tests unitaires : expressivité (le nommage tout particulièrement), granularité (i.e on teste une chose à la fois), rapidité (i.e instantané), couverture de code et indépendance (un test ne dépend pas des autres)
-* Le design du code : utiliser les pratiques vues en cours pour éviter de faire du code difficilement maintenable et évolutif (SOLID...)
+* Solution apportÃ©e aux problÃ¨mes posÃ©s dans le fichier Readme.md + rÃ©ponses aux questions (Ã  mettre dans le fichier ci-dessous)
+* La qualitÃ© des commits : granularitÃ© fine et commentaires explicites du pourquoi (et non du quoi, i.e ne pas dire quels fichiers ont Ã©tÃ© modifiÃ©s, c'est inutile, Git le dit dÃ©jÃ )
+* La qualitÃ© du code : utiliser un nommage correct + R# donne des rÃ¨gles Ã  respecter, il suffit de les corriger
+* Les tests unitaires : expressivitÃ© (le nommage tout particuliÃ¨rement), granularitÃ© (i.e on teste une chose Ã  la fois), rapiditÃ© (i.e instantanÃ©), couverture de code et indÃ©pendance (un test ne dÃ©pend pas des autres)
+* Le design du code : utiliser les pratiques vues en cours pour Ã©viter de faire du code difficilement maintenable et Ã©volutif (SOLID...)
 
-ATTENTION: ne pas changer le nommage des projets, des classes et méthodes donnés (sauf sur les tests si vous voulez).
+ATTENTION: ne pas changer le nommage des projets, des classes et mÃ©thodes donnÃ©s (sauf sur les tests si vous voulez).
 
-A LA FIN DU TP: pensez à pousser vos commits sur votre compte GitHub et envoyer votre dépôt à mon adresse mail.
+A LA FIN DU TP: pensez Ã  pousser vos commits sur votre compte GitHub et envoyer votre dÃ©pÃ´t Ã  mon adresse mail.
 
-Réponses aux questions posées
+RÃ©ponses aux questions posÃ©es
 -----------------------------
 
-Q1) *Pour éviter les if ou switch, on peut utiliser une boucle, ici je créer untableau contenant les symboles afin de boucler dessus*
+Q1) *Pour Ã©viter les if ou switch, on peut utiliser une boucle, ici je crÃ©er untableau contenant les symboles afin de boucler dessus*
 
-Q2) *pour faire en sorte que Calculator ne sache pas qu'elles opération il peut faire, nous faisons une interface, cela permettra de pouvoir implémenter n'importe quel calcul*
+Q2) *pour faire en sorte que Calculator ne sache pas qu'elles opÃ©ration il peut faire, nous faisons une interface, cela permettra de pouvoir implÃ©menter n'importe quel calcul*
 
-Q3) *le principe que l'ont utilise ici, est celui de séparer les fonctionalités afin que chaque classe ai sa fonction et pas plus*
+Q3) *le principe que l'ont utilise ici, est celui de sÃ©parer les fonctionalitÃ©s afin que chaque classe ai sa fonction et pas plus*
 
-Q4) * le probleme est que les différents tests font arrêter l'application, par exemple la division par zero*
+Q4) *le probleme est que les diffÃ©rents tests font arrÃªter l'application, par exemple la division par zero*
 
-Q5) * refactoring, ou déplacer des bout de code et les rassembler dans une même classe pour séparer les fonctionnalités*
+Q5) *refactoring, ou dÃ©placer des bout de code et les rassembler dans une mÃªme classe pour sÃ©parer les fonctionnalitÃ©s*
 
 Q6)
  
