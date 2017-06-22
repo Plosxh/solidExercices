@@ -1,4 +1,5 @@
-﻿using NFluent;
+﻿using System;
+using NFluent;
 using NUnit.Framework;
 
 namespace SolidExercices.Tests
@@ -11,7 +12,7 @@ namespace SolidExercices.Tests
             var operation = new OperationInterfaceSum();
             var calculator = new Calculator(operation);
             var result = calculator.Calculate("1+2,3");
-            Check.That(result).IsEqualTo(3.3);
+            Check.That(result).IsEqualTo(Convert.ToDecimal(3.3));
         }
         [Test]
         public void CalculateASub()
@@ -19,7 +20,7 @@ namespace SolidExercices.Tests
             var operation = new OperationInterfaceSub();
             var calculator = new Calculator(operation);
             var result = calculator.Calculate("2-1");
-            Check.That(result).IsEqualTo(1.0);
+            Check.That(result).IsEqualTo(Convert.ToDecimal(1.0));
         }
         [Test]
         public void CalculateADiv()
@@ -27,7 +28,7 @@ namespace SolidExercices.Tests
             var operation = new OperationInterfaceDiv();
             var calculator = new Calculator(operation);
             var result = calculator.Calculate("1/2");
-            Check.That(result).IsEqualTo(0.5);
+            Check.That(result).IsEqualTo(Convert.ToDecimal(0.5));
         }
         [Test]
         public void CalculateAMult()
@@ -35,7 +36,7 @@ namespace SolidExercices.Tests
             var operation = new OperationInterfaceMult();
             var calculator = new Calculator(operation);
             var result = calculator.Calculate("1*2");
-            Check.That(result).IsEqualTo(2.0);
+            Check.That(result).IsEqualTo(Convert.ToDecimal(2.0));
         }
         [Test]
         public void CalculateException()
@@ -43,7 +44,7 @@ namespace SolidExercices.Tests
             var operation = new OperationInterfaceSum();
             var calculator = new Calculator(operation);
             var result = calculator.Calculate("1*2-9");
-            Check.That(result).IsEqualTo(0.0);
+            Check.That(result).IsEqualTo(Convert.ToDecimal(0.0));
         }
     }
 }

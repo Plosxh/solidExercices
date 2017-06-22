@@ -8,6 +8,6 @@ namespace SolidExercices
 {
     public interface IOperationInterface
     {
-        double Calculate(String operation);
+        decimal Calculate(String operation);
     }
 }

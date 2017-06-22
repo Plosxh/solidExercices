@@ -8,10 +8,10 @@ namespace SolidExercices
 {
         public class OperationInterfaceSub : IOperationInterface
         {
-            public double Calculate(string operation)
+            public decimal Calculate(string operation)
             {
                 string[] operande = operation.Split(Convert.ToChar("-"));
-                return Convert.ToDouble(operande[0]) - Convert.ToDouble(operande[1]);
+                return Convert.ToDecimal(operande[0]) - Convert.ToDecimal(operande[1]);
             }
         }
     

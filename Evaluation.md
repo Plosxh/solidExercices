@@ -19,7 +19,7 @@ Réponses aux questions posées
 
 Q1) *Pour éviter les if ou switch, on peut utiliser une boucle, ici je créer untableau contenant les symboles afin de boucler dessus*
 
-Q2)
+Q2) *pour faire en sorte que Calculator ne sache pas qu'elles opération il peut faire, nous faisons une interface, cela permettra de pouvoir implémenter n'importe quel calcul*
 
 Q3)
 

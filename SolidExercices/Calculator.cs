@@ -13,10 +13,10 @@ namespace SolidExercices
         {
             _operation = operation_interface;
         }
-       
-        public double Calculate(string operation)
+
+        public decimal Calculate(string operation)
         {
-            double res = 0.0;
+            decimal res = 0;
             var operationPlus = operation.Split('+');
             for (int i = 0; i < symboles.Length; i++)
             {
